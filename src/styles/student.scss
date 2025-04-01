@@ -1,0 +1,75 @@
+.student {
+  width: 100%;
+  max-width: 350px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  }
+
+  &__image {
+    width: 100%;
+    height: 180px;
+    object-fit: contain;
+    border-bottom: 3px solid #3498db;
+  }
+
+  &__content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  &__name {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #333;
+  }
+
+  &__text {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.5;
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+
+    button {
+      padding: 8px 16px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.3s ease, transform 0.2s ease;
+    }
+
+    .student__btn--primary {
+      background: #3498db;
+      color: white;
+
+      &:hover {
+        background: #2980b9;
+        transform: scale(1.05);
+      }
+    }
+
+    .student__btn--secondary {
+      background: #e74c3c;
+      color: white;
+
+      &:hover {
+        background: #c0392b;
+        transform: scale(1.05);
+      }
+    }
+  }
+}
