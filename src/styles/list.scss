@@ -1,0 +1,29 @@
+.list-group-item {
+  transition: all 0.3s ease;
+
+  &:hover {
+    background-color: #f8f9fa;
+  }
+
+  .fruit-name {
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  small {
+    color: #6c757d;
+  }
+}
+
+.list-unstyled {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+
+  li {
+    background-color: #e9ecef;
+    padding: 0.2rem 0.5rem;
+    border-radius: 0.25rem;
+    font-size: 0.8rem;
+  }
+}
