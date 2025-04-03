@@ -1,9 +1,12 @@
+import Button from "./components/Button";
 import "./styles/main.scss";
 
 function App() {
   return (
     <div className="wrapper">
-      <div className="center"></div>
+      <div className="center">
+        <Button />
+      </div>
     </div>
   );
 }
