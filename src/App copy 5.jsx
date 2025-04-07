@@ -1,4 +1,4 @@
-import MyComponent from "./components/MyComponent";
+import MyComponent from "./components/UserCard";
 import "./styles/main.scss";
 
 function App() {

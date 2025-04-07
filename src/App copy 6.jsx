@@ -1,9 +1,12 @@
+import ColorPicker from "./components/ColorPicker";
 import "./styles/main.scss";
 
 function App() {
   return (
     <div className="wrapper">
-      <div className="center"></div>
+      <div className="center">
+        <ColorPicker />
+      </div>
     </div>
   );
 }

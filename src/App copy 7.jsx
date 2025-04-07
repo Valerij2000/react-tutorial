@@ -1,9 +1,12 @@
+import Cars from "./components/Cars";
 import "./styles/main.scss";
 
 function App() {
   return (
     <div className="wrapper">
-      <div className="center"></div>
+      <div className="center">
+        <Cars />
+      </div>
     </div>
   );
 }
