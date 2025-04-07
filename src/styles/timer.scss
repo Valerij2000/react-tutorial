@@ -1,0 +1,21 @@
+.timer {
+  margin-top: 20px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  animation: timer-animation 1s infinite;
+
+  @keyframes timer-animation {
+    0% {
+      color: #333;
+    }
+
+    50% {
+      color: #ff0000;
+    }
+
+    100% {
+      color: #333;
+    }
+  }
+}
