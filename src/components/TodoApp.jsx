@@ -1,25 +1,36 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Swal from "sweetalert2";
 
 const TodoApp = () => {
   const [inputValue, setInputValue] = useState("");
-  const [todos, setTodos] = useState([]);
+  const [todos, setTodos] = useState(() => {
+    const localTodos = localStorage.getItem("todos");
+    return localTodos ? JSON.parse(localTodos) : [];
+  });
+
+  // Save todos to localStorage whenever they change
+  useEffect(() => {
+    localStorage.setItem("todos", JSON.stringify(todos));
+  }, [todos]);
 
   const handleAddTodo = () => {
     if (inputValue.trim() === "") {
       Swal.fire({
         target: "body",
-        titleText: "you have to type something",
-        text: "It's look like you hadn't typed anything",
+        titleText: "You have to type something",
+        text: "It looks like you hadn't typed anything",
         icon: "warning",
         confirmButtonText: "Okay!",
       });
       return;
     }
 
+    const capitalizedText =
+      inputValue.charAt(0).toUpperCase() + inputValue.slice(1).toLowerCase();
+
     const newTodo = {
       id: Date.now(),
-      text: inputValue,
+      text: capitalizedText,
       completed: false,
     };
 
@@ -47,7 +58,7 @@ const TodoApp = () => {
   };
 
   return (
-    <div className="wrapper">
+    <>
       <div className="text-container">
         <h1>My Todo List</h1>
       </div>
@@ -103,7 +114,7 @@ const TodoApp = () => {
           ))}
         </div>
       </div>
-    </div>
+    </>
   );
 };
 
