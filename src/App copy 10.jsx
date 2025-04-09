@@ -1,10 +1,10 @@
-import HeightWidthComponent from "./components/HeightWidthComponent";
+import EffectComponent from "./components/EffectComponent";
 import "./styles/main.scss";
 
 function App() {
   return (
     <div className="wrapper">
-      <HeightWidthComponent />
+      <EffectComponent />
     </div>
   );
 }
