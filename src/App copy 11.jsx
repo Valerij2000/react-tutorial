@@ -1,12 +1,10 @@
-import ComponentA from "./context/ComponentA";
+import HeightWidthComponent from "./components/HeightWidthComponent";
 import "./styles/main.scss";
 
 function App() {
   return (
     <div className="wrapper">
-      <div className="container p-5">
-        <ComponentA />
-      </div>
+      <HeightWidthComponent />
     </div>
   );
 }
